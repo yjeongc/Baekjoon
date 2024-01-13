@@ -64,16 +64,22 @@ void MergeSort(int arr[], int left, int right)
 
 int main()
 {
-    int arr[7] = {3,2,4,1,7,6,5};
-    int i;
+    int i, N;
+    scanf("%d", &N);
+
+    int *arr = (int *)malloc(sizeof(int)*N);
+
+    for (i=0; i<N; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
 
     //배열 arr의 전체 영역 정렬
-    MergeSort(arr, 0, sizeof(arr)/sizeof(int)-1);
+    MergeSort(arr, 0, N-1);
 
-    for(i=0; i<7; i++)
-        printf("%d ", arr[i]);
+    for(i=0; i<N; i++)
+        printf("%d\n", arr[i]);
 
-    printf("\n");
 
     return 0;
 }
