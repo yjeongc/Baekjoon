@@ -3,52 +3,12 @@
 int CountMomey(int Money)
 {
     int count = 0;
+    int ChangeList[] = {500, 100, 50, 10, 5 ,1};
 
-    //Money >= 500인 경우
-    while(Money>=500)
+    for (int i = 0; i<6; i++)
     {
-        Money -= 500;
-        count++;
-    }
-
-
-    //Money >=100인 경우
-    while (Money>=100)
-    {
-        Money -= 100;
-        count++;
-    }
-
-
-    //Money >= 50인 경우
-    while(Money>=50)
-    {
-        Money -= 50;
-        count ++;
-    }
-
-
-    //Money >= 10인 경우
-    while(Money>=10)
-    {
-        Money -= 10;
-        count ++;
-    }
-
-
-    //Money >= 5인 경우
-    while(Money>=5)
-    {
-        Money -= 5;
-        count ++;
-    }
-
-
-    //Money >= 1인 경우
-    while(Money>=1)
-    {
-        Money -= 1;
-        count ++;
+        count += Money / ChangeList[i];
+        Money %= ChangeList[i];
     }
 
     return count;
