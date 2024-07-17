@@ -26,6 +26,7 @@ int binarySearch(vector<int>& arr, int target) {
     return -1; // 원하는 요소를 찾지 못한 경우 -1 반환
 }
 
+
 int main() {
     int N = 0;
     cin >> N;
